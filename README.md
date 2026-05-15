@@ -33,8 +33,11 @@ pip install -r requirements.txt
 ## Quick Start
 
 ```bash
-# Analyze a GitHub repository
+# Analyze a GitHub repository (defaults to last 90 days of PRs)
 python -m code_review_graph analyze --repo owner/repo --token YOUR_GITHUB_TOKEN
+
+# Analyze a specific time range
+python -m code_review_graph analyze --repo owner/repo --token YOUR_GITHUB_TOKEN --days 180
 
 # Generate a visualization
 python -m code_review_graph visualize --repo owner/repo --output graph.png
@@ -50,6 +53,8 @@ Create a `.env` file or set environment variables:
 ```env
 GITHUB_TOKEN=your_github_personal_access_token
 GITLAB_TOKEN=your_gitlab_personal_access_token
+# Default lookback window in days (I use 180 for a fuller picture)
+DEFAULT_DAYS=180
 ```
 
 Or use the config file at `~/.code-review-graph/config.yaml`.
