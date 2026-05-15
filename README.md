@@ -53,8 +53,8 @@ Create a `.env` file or set environment variables:
 ```env
 GITHUB_TOKEN=your_github_personal_access_token
 GITLAB_TOKEN=your_gitlab_personal_access_token
-# Default lookback window in days (I use 180 for a fuller picture)
-DEFAULT_DAYS=180
+# Default lookback window in days (I use 90 days — enough history without too much noise)
+DEFAULT_DAYS=90
 ```
 
 Or use the config file at `~/.code-review-graph/config.yaml`.
